@@ -9,7 +9,7 @@ jobs:
 
       - run:
           name: Dependencies
-          command: pip install ansible=2.7.9
+          command: pip install ansible==2.7.9
 
       - run:
           name: Permissions for Deploy
