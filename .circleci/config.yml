@@ -6,6 +6,7 @@ jobs:
       python: 2.7.5
     
     steps:
+      - checkout
 
       - run:
           name: Dependencies
@@ -13,8 +14,8 @@ jobs:
 
       - run:
           name: Permissions for Deploy
-          command: chmod +x bin/deploy.sh
+          command: chmod +x ./bin/deploy.sh
 
       - deploy:
           name: Execute ansible scripts
-          command: bin/deploy.sh
+          command: ./bin/deploy.sh
