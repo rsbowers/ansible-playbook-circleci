@@ -17,4 +17,4 @@ jobs:
 
       - deploy:
           name: Execute ansible scripts
-          command: ./bin/deploy.js
+          command: ./bin/deploy.sh
