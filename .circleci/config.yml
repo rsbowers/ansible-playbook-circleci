@@ -13,7 +13,7 @@ jobs:
 
       - run:
           name: Permissions for Deploy
-          command: chmod +x ./bin/deploy.js
+          command: chmod +x ./bin/deploy.sh
 
       - deploy:
           name: Execute ansible scripts
