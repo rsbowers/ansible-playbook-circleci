@@ -1,0 +1,11 @@
+machine:
+  python:
+    version: 2.7.5
+dependencies:
+  override:
+    - pip install requirements.txt
+deployment:
+  prod:
+    branch: master
+    commands:
+      - bash -x ./bin/deploy.sh
