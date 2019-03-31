@@ -1,11 +1,20 @@
-machine:
-  python:
-    version: 2.7.5
-dependencies:
-  override:
-    - pip install requirements.txt
-deployment:
-  prod:
-    branch: master
-    commands:
-      - bash -x ./bin/deploy.sh
+version: 2
+jobs:
+  build:
+    
+    machine:
+      python: 2.7.5
+    
+    steps:
+
+      - run:
+          name: Dependencies
+          command: pip install requirements.txt
+
+      - run:
+          name: Permissions for Deploy
+          command: chmod +x ./bin/deploy.js
+
+      - deploy:
+          name: Execute ansible scripts
+          command: ./bin/deploy.js
